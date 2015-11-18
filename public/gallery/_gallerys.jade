@@ -1,0 +1,11 @@
+- key = current.path[1]
+- article = public.gallerys._data[key]
+  
+
+.gallerys-wrap
+  .container
+    .four.columns
+      img(src="/gallerys/#{gallery.key}/gallery-image.png" width="200px" height="300px" alt="Gallery Image")
+    .eight.columns
+      h3= gallery.title
+      != yield

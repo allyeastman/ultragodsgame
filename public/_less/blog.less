@@ -1,0 +1,38 @@
+.blog {
+	padding-bottom: 50px;
+}
+
+.blog-wrap {
+  background-color: #fff;
+  color: #000;
+  padding-bottom: 50px;
+}
+
+.article-image {
+	display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.blog a{
+  color: #000;
+  text-decoration: none;
+}
+.blog a:hover{
+  color: #7DE4D6;
+  text-decoration: none;
+}
+
+
+
+// DOESNT SHOW ON MOBILE/TABLET
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  #blog { display: none; }  /* don't show it on small screens */
+}
+
+// SHOWS ON MOBILE
+
+@media screen and (min-width: 900px) and (max-width: 3000px) {
+  #blog-mobile { display: none; }  /* don't show it on small screens */
+}

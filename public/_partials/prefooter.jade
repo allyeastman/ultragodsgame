@@ -1,0 +1,58 @@
+- articles = [];
+- for article, key in public.blog._data
+	- if (key !== "index")
+		- article.key = key; articles.push(article);
+- articles.sort(function(a, b) {return (new Date(b.date)) - (new Date(a.date))});
+
+//- gets everything before <!-- more -->
+- function excerpt(content) {return content.split("<!-- more -->")[0];}
+
+.row.prefooter#prefooter
+	.seven.columns.prefooter-pull-left
+		p About Us
+		p Nulla auctor vitae quam eu blandit. Morbi pretium hendrerit enim nec fringilla. Sed vitae quam mauris. Proin pellentesque sollicitudin neque, vel rutrum quam ornare eget. Mauris sit amet ultricies ante, id ultrices turpis.
+		//- for article in articles.slice(0,1)	
+		//- 	.row
+		//- 		.two.columns
+		//- 			a(href="/blog/#{article.key}")
+		//- 				img.prefooter-image(src="/blog/#{article.key}/article-image.jpg" alt="article image")
+		//- 		.six.columns
+		//- 			a(href="/blog/#{article.key}")
+		//- 				p(style="margin: 0px;")= article.title
+		//- 				.article-date= article.date
+		//- 		//- .excerpt!= excerpt(partial(article.key + "/index"))
+
+
+	.two.columns.prefooter-pull-left
+		ul
+			li
+	.two.columns.prefooter-pull-right
+		ul
+			li
+				a(href="/") Home
+			li
+				a(href="/about") About
+			li
+				a(href="/contact") Contact
+			li
+				a(href="/terms") Terms and Conditions
+			//- li
+				//- a(href="/privacy") Privacy Policy
+			li
+				a(href="/sitemap") Sitemap
+
+.row.prefooter-mobile#prefooter-mobile
+	.twelve.columns.prefooter-pull-center
+		ul
+			li
+				a(href="/") Home
+			li
+				a(href="/about") About
+			li
+				a(href="/contact") Contact
+			li
+				a(href="/terms") Terms of Service
+			li
+				a(href="/privacy") Privacy Policy
+			li
+				a(href="/sitemap") Sitemap

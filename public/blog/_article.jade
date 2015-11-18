@@ -1,0 +1,56 @@
+- key = current.path[1]
+- article = public.blog._data[key]
+
+.container.blog
+	//- img(src="article-image.jpg" class="article-image" alt="article image")
+	h1= article.title
+	.text-center.article-date= article.date
+	if article.author
+		.text-center: p= article.author
+	
+	.blog-wrap
+		!= yield
+
+	//- Go to www.addthis.com/dashboard to customize your tools
+	p(style="margin: 0px;") Share this blog post:	
+		.addthis_sharing_toolbox
+
+	//- .twelve.columns.social-media-contact
+	//- 	p(style="margin: 0;") Liked this blog post? Follow us on Social Media for more updates:
+	//- 	ul
+	//- 		li
+	//- 			a(href="https://www.facebook.com/WebDesignByNina")
+	//- 				i.icon-facebook.social-media-icons
+	//- 			a(href="https://www.facebook.com/WebDesignByNina") Facebook
+	//- 		li
+	//- 			a(href="https://twitter.com/designbyninaco")
+	//- 				i.icon-twitter.social-media-icons
+	//- 			a(href="https://twitter.com/designbyninaco") Twitter
+	//- 		//- li
+	//- 		//- 	a(href="")
+	//- 		//- 		i.icon-linkedin.social-media-icons
+	//- 		//- 	a(href="") LinkedIn
+	//- 		li
+	//- 			a(href="")
+	//- 				i.icon-instagram.social-media-icons
+	//- 			a(href="") Instagram
+
+
+.container.blog-wrap#disqus_thread
+	script.
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'designbynina';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+//- Go to www.addthis.com/dashboard to customize your tools
+script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55e78bf2acf23261" async="async")

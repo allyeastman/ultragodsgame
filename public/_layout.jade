@@ -1,0 +1,39 @@
+doctype
+html.no-js(lang="")
+	head
+		title= title
+		meta(name="description" content="#{ description }")
+		meta(charset="utf-8")
+		meta(http-equiv="x-ua-compatible" content="ie=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		link(rel="icon" type="image/png" href="favicon.png")
+		//- link(rel="apple-touch-icon" href="apple-touch-icon.png")
+		link(rel="stylesheet" href="/main.css")
+
+	body
+		<!--[if lt IE 9]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+		
+		!= partial("_partials/navbar")
+		!= partial("_partials/hero")
+		
+		
+		if current.path[1] === "index"
+			!= yield
+		else if current.path[0] === "blog"
+			!= partial("/blog/_article")
+		else
+			!= yield
+
+
+		//- != partial("_partials/call-to-action")
+		//- != partial("_partials/prefooter")
+		!= partial("_partials/footer")
+
+		block scripts
+			script(type="text/javascript" src="../main.js")
+			script(type="text/javascript" src="../src/jquery.js")
+			script(type="text/javascript" src="../src/navbar.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js")
+			//- script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+			script(type="text/javascript" src="../src/smoothscroll.js")

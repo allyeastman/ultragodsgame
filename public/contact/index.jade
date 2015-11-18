@@ -1,0 +1,63 @@
+script(src="src/form.js")
+
+.container
+	.row.contact.padding
+		.row
+			h3 CONTACT
+			hr
+		.row.contact
+			.twelve.columns
+				a(href="tel:0433599566") Phone: 0433 599 566
+			.twelve.columns
+				a(href="mailto:info@designbynina.com.au") Email: info@designbynina.com.au
+		.row
+			.twelve.columns.social-media-contact
+				ul
+					li
+						a(href="https://www.facebook.com/WebDesignByNina")
+							i.icon-facebook.social-media-icons
+						a(href="https://www.facebook.com/WebDesignByNina") Facebook
+					li
+						a(href="https://twitter.com/designbyninaco")
+							i.icon-twitter.social-media-icons
+						a(href="https://twitter.com/designbyninaco") Twitter
+					//- li
+					//-   a(href="")
+					//-     i.icon-linkedin.social-media-icons
+					//-   a(href="") LinkedIn
+					li
+						a(href="https://instagram.com/designbynina/")
+							i.icon-instagram.social-media-icons
+						a(href="https://instagram.com/designbynina/") Instagram
+		!=partial("_contact.html")
+		form(target="_blank" action="//formspree.io/info@designbynina.com.au" method="POST")
+			.row
+				.six.columns
+					label(for="nameInput") Your name
+					input.u-full-width(name="name" type="text" placeholder="Your name" id="nameInput" required="You must provide your name")
+				.six.columns
+					label(for="exampleEmailInput") Your number
+					input.u-full-width(name="number" type="number" placeholder="Your number" id="exampleEmailInput")
+			.row
+				.six.columns
+					label(for="EmailInput") Your email
+					input.u-full-width(name="_replyto" type="email" placeholder="Your email" id="EmailInput" required="You must provide your email")
+				.six.columns
+					label(for="RecipientInput") Reason for contacting
+					input.u-full-width(name="reason" type="text" placeholder="Your reason for contact" id="RecipientInput")
+					//- select.u-full-width(id="RecipientInput")
+					//-   option(value="Option 1") Questions
+					//-   option(value="Option 2") Quote
+					//-   option(value="Option 3") Blog Suggestions
+					//-   option(value="Option 4") Other
+			.row
+				.twelve.columns
+					label(for="Message") Message
+					textarea.u-full-width(name="message" placeholder="Your message" id="Message"  required="You must provide your message")
+				.twelve.columns
+					//- .g-recaptcha(data-sitekey="6LeaSAwTAAAAAFYe6htVfngynKQUb1kXOEXdVdoO")
+					input.contact-btn(type="submit" value="Submit")
+					input(input type="hidden" name="_next" value="//localhost:9000/thankyou-contact")
+					input(input type="hidden" name="_subject" value="New submission!")
+					input(type="text" name="_gotcha" style="display:none")
+

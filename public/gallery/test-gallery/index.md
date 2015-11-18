@@ -1,0 +1,1 @@
+Example of Gallery Image Text

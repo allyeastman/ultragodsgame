@@ -1,0 +1,17 @@
+- gallerys = [];
+- for gallery, key in public.gallery._data
+  - if (key !== "index")
+    - gallery.key = key; gallerys.push(gallery);
+- gallerys.sort(function(a, b) {return (new Date(b.date)) - (new Date(a.date))});
+
+
+.gallerys-list
+  .container
+    for gallery in gallerys
+      .card-gallerys(id="#{gallery.key}")
+        a(href="/gallery/#{gallery.key}")
+          img(src="/gallery/#{gallery.key}/gallery-image.png" width="200px" height="300px" alt="gallery Cup Image")
+        .card-content
+          .text-center
+            a(href="/gallery/#{gallery.key}")
+              h3= gallery.title

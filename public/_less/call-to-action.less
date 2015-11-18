@@ -1,0 +1,50 @@
+.call-to-action {
+	background-color: #333;
+	padding-top: 15px;
+	min-height: 70px;
+	color: #fff;
+}
+
+.call-to-action-text {
+	padding: 10px;
+	margin-bottom: 0px;
+}
+
+.call-to-action-btn {
+	padding: 10px;
+	// margin-left: 40px!important;
+
+}
+
+.call-to-action-btn a {
+	border: 2px solid #fff;
+	background-color: #fff;
+	color: #000;
+	border-radius: 0px !important;
+}
+
+.call-to-action-btn a:hover {
+	border: 2px solid #fff;
+	background-color: #fff;
+	color: #000;
+}
+
+
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+
+// DOESNT SHOW ON MOBILE/TABLET
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #call-to-action { display: none; }  /* don't show it on small screens */
+}
+
+// SHOWS ON MOBILE
+
+@media screen and (min-width: 600px) and (max-width: 3000px) {
+  #call-to-action-mobile { display: none; }  /* don't show it on small screens */
+}

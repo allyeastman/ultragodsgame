@@ -1,0 +1,53 @@
+//- - articles = [];
+//- - for article, key in public.blog._data
+//- 	- if (key !== "index")
+//- 		- article.key = key; articles.push(article);
+//- - articles.sort(function(a, b) {return (new Date(b.date)) - (new Date(a.date))});
+
+//- //- gets everything before <!-- more -->
+//- - function excerpt(content) {return content.split("<!-- more -->")[0];}
+
+//- .container
+//- 	.blog.padding
+//- 		.twelve.columns
+//- 			h3 BLOG
+//- 			hr
+//- 			//- p Coming Soon! Subscribe above to recieve the first blog posts that range from marketing tips &amp; tricks to keeping your site up to date!
+
+//- .container#blog
+//- 	for article in articles.slice(0,12)
+//- 		.card.six.columns
+//- 			.image
+//- 				a(href="/blog/#{article.key}")
+//- 					img(src="/blog/#{article.key}/article-image.jpg" alt="article image")
+
+
+//- 			.content
+//- 				.text-center
+//- 					a(href="/blog/#{article.key}")
+//- 						h3= article.title
+//- 				.text-center.article-date= article.date
+//- 				if article.author
+//- 					.text-center: a.author-link(href="/authors/#{article.author}")=article.author
+//- 					.excerpt!= excerpt(partial(article.key + "/index"))
+//- 			.action
+//- 				a(href="/blog/#{article.key}") READ MORE
+
+//- .container#blog-mobile
+//- 	for article in articles.slice(0,12)
+//- 		.card.twelve.columns
+//- 			.image
+//- 				a(href="/blog/#{article.key}")
+//- 					img(src="/blog/#{article.key}/article-image.jpg" alt="article image")
+
+
+//- 			.content
+//- 				.text-center
+//- 					a(href="/blog/#{article.key}")
+//- 						h3= article.title
+//- 				.text-center.article-date= article.date
+//- 				if article.author
+//- 					.text-center: a.author-link(href="/authors/#{article.author}")=article.author
+//- 					.excerpt!= excerpt(partial(article.key + "/index"))
+//- 			.action
+//- 				a(href="/blog/#{article.key}") READ MORE
