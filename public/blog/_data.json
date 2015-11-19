@@ -1,12 +1,37 @@
 {
-	"introduction": {
-		"title": "Introduction",
-		"date": "Sept 3, 2015",
+	"the-road-to-ultra": {
+		"title": "The Road to Ultra",
+		"date": "Sept 25, 2015",
+		"author": "Jim Vincent"
+	},
+	"ultra-world": {
+		"title": "Ultra World",
+		"date": "Oct 5, 2015",
+		"author": "Jamie Proudlock"
+	},
+	"finding-the-ultra": {
+		"title": "Finding The Ultra",
+		"date": "Oct 13, 2015",
+		"author": "Eugene Martens"
+	},
+	"ultra-vision": {
+		"title": "Ultra Vision",
+		"date": "Oct 19, 2015",
+		"author": "Jon Flores"
+	},
+	"the-magnum-opus-of-ultra": {
+		"title": "Ultra Vision",
+		"date": "Nov 3, 2015",
+		"author": "Savik"
+	},
+	"ultra-hawk": {
+		"title": "Ultra Hawk",
+		"date": "Nov 10, 2015",
 		"author": "Nina Sae Heng"
 	},
-	"why-you-need-social-media": {
-		"title": "Why you need social media",
-		"date": "Sept 4, 2015",
-		"author": "Nina Sae Heng"
+	"piece-of-ultra-cake": {
+		"title": "Piece of Ultra Cake",
+		"date": "Nov 16, 2015",
+		"author": "Jim Vincent"
 	}
 }
