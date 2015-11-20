@@ -15,7 +15,7 @@
 
 
 .index-white
-	.container#blog
+	.container
 		
 		.row
 			for article in articles.slice(0,12)
@@ -23,31 +23,32 @@
 					.five.columns
 						.blog-post-image-2
 							a(href="/blog/#{article.key}")
-								img(src="/blog/#{article.key}/article-image.jpg" alt="article image")
+								img(src="/blog/#{article.key}/article-image.png" alt="article image")
 					.seven.columns
 						.blog-post-2
 							a(href="/blog/#{article.key}")
 								h4= article.title
 							.text-center.article-date= article.date
 							p Exerpt Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							a(href="/blog/#{article.key}")
+							//- // .excerpt!= excerpt(partial(article.key + "/index"))
+							a(href="/blog/#{article.key}") Read More
 				
 
-.container#blog-mobile
-	for article in articles.slice(0,12)
-		.card.twelve.columns
-			.image
-				a(href="/blog/#{article.key}")
-					img(src="/blog/#{article.key}/article-image.jpg" alt="article image")
+//- .container#blog-mobile
+//- 	for article in articles.slice(0,12)
+//- 		.card.twelve.columns
+//- 			.image
+//- 				a(href="/blog/#{article.key}")
+//- 					img(src="/blog/#{article.key}/article-image.jpg" alt="article image")
 
 
-			.content
-				.text-center
-					a(href="/blog/#{article.key}")
-						h3= article.title
-				.text-center.article-date= article.date
-				if article.author
-					.text-center: a.author-link(href="/authors/#{article.author}")=article.author
-					//- .excerpt!= excerpt(partial(article.key + "/index"))
-			.action
-				a(href="/blog/#{article.key}") READ MORE
+//- 			.content
+//- 				.text-center
+//- 					a(href="/blog/#{article.key}")
+//- 						h3= article.title
+//- 				.text-center.article-date= article.date
+//- 				if article.author
+//- 					.text-center: a.author-link(href="/authors/#{article.author}")=article.author
+//- 					//- .excerpt!= excerpt(partial(article.key + "/index"))
+//- 			.action
+//- 				a(href="/blog/#{article.key}") READ MORE

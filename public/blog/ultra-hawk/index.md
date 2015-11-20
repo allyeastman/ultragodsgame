@@ -1,0 +1,8 @@
+Hey guys my name is Nina Sae Heng, I am one of two people in the marketing team (the other being Ally.) To give you a quick overview of what Marketing is, take a look at Wikipedias fantastic definition of it. <!-- more -->
+“Marketing is the process by which companies create customer interest in products or services. It generates the strategy that underlies sales techniques, business communication, and business development.  It is an integrated process through which companies build strong customer relationships and create value for their customers and for themselves.”  — Wikipedia.
+
+So basically that is what I do. At University I study a Bachelor of Design, majoring in Web Design. This development post is a little bit less about development and more about the marketing aspects of the game.
+
+To market the game originally we needed to know what target audience we were going for and then go on from there. Basically everything originates from the target audience. You guys help us find from your age group what social media’s you use, what games you are already using, your interests, the genders of your age group more likely to play and even more. It’s similar to an ultra tree that expands out helping us figure out everything about you through statistics of your age.
+
+Marketing the game helps us get the word out to you. Not just to get you interested. Its how we show you the ULTRA Gods Game. Its how we entice you into the ultra world we have created.
